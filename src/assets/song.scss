@@ -1,0 +1,38 @@
+// This container is for center image and h2 and h3 in center
+.song-container{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8rem ;
+
+    // center image
+    img{
+        width: 15%;
+        // height: 100%;
+        border-radius: 20%;
+    }
+    // center song name 
+    h2{
+        padding: 3rem 1rem 1rem 1rem;
+        color: black;
+
+    }
+
+    // description
+    h3{
+        font-size: 1rem;
+        font-weight:bold;
+        color: rgb(56, 52, 52);
+    }
+}
+
+@media all and (max-width: 500px)
+{
+    .song-container{
+        img{
+            width: 50%;
+        }
+    }
+}

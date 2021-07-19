@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState, useRef} from 'react';
+import Song from "./components/Song";
+import Player from "./components/Player";
+import Library from "./components/Library";
+import "./assets/app.scss";
+import Data from "./data";
 
-function App() {
-  return (
+function App()
+{
+  const [songs,setSongs] = useState(Data());
+  const[currentSong, setCurrentSong] = useState(songs[0]);
+  const[isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+
+
+  return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Song 
+          song={songs}
+          setSongs={setSongs}
+          currentSong={currentSong}
+          setCurrentSong={setCurrentSong}
+      />
+      <Player
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+          currentSong={currentSong}
+          audioRef={audioRef}
+          songs={songs}
+          setCurrentSong={setCurrentSong}
+          setSongs={setSongs}
+      />
+      <Library
+          audioRef={audioRef}
+          songs={songs}
+          setCurrentSong={setCurrentSong}
+          isPlaying={isPlaying}
+          setIsPlaying={setIsPlaying}
+          setSongs={setSongs}
+      />
     </div>
   );
+
 }
+
 
 export default App;
