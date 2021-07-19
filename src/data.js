@@ -13,10 +13,10 @@ const music = () => {
       id: uuidv4(),
       active: true
     }, {
-      name: "Acchi Mazza Aayi",
-      cover: "https://a10.gaanacdn.com/gn_img/albums/dwN39y83DP/wN39LEoNKD/size_xxl_1542018202.webp",
-      artist: "Dino James",
-      audio: "https://dwn.mr-jatt1.com/siteuploads/files/sfd11/5350/Achi%20Maza%20Aayi(Mr-Jatt1.com).mp3",
+      name: "Despacito",
+      cover: "https://upload.wikimedia.org/wikipedia/en/c/c8/Luis_Fonsi_Feat._Daddy_Yankee_-_Despacito_%28Official_Single_Cover%29.png",
+      artist: "Luis Fonsi",
+      audio: "https://dwn.mr-jatt1.com/siteuploads/files/sfd5/2369/Despacito(Mr-Jatt1.com).mp3",
       color: [
         "#41DACC", "#FAB670"
       ],
